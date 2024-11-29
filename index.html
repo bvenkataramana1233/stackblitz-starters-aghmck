@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Product Store</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Top Banner -->
+    <!-- <div class="banner">
+        <h2>Special Offers!</h2>
+        <p>Check out our latest discounts.</p>
+    </div> -->
+    <div id="banner" class="banner">
+    <img id="bannerImage" src="default-banner.jpg" alt="Banner" class="banner-img"
+    srcset="default-banner-small.jpg 480w, default-banner-medium.jpg 768w, default-banner-large.jpg 1024w"
+    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 100vw">
+    </div>
+    <div class="container">
+        <!-- Left Side Filter -->
+        <aside class="sidebar1">
+        </aside>
+        </aside>
+        <aside class="sidebar">
+            <h5>Filters</h5>
+            <hr class="line">
+            <form class="formcontent">
+            <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by product name..." />
+            <button type="button" id="searchBtn" >Search</button>
+          </div>
+          <hr class="line">
+                <h5>Categories</h5><br />
+                <label><input type="checkbox" name="category" value="men's clothing"> Men's Clothing</label><br>
+                <label><input type="checkbox" name="category" value="women's clothing"> Women's Clothing</label><br>
+                <label><input type="checkbox" name="category" value="electronics"> Electronics</label><br>
+                <label><input type="checkbox" name="category" value="jewelery"> Jewelry</label><br>
+                <label><input type="checkbox" name="category" value=""> All</label><br>
+            </form>
+            <hr class="line">
+            <h5>Set Your Price Range</h5>
+            <br><br>
+    
+    <div class="range-label">
+      <span>min-0</span>
+      <span id="price-value">$0</span> <!-- This will show the selected price -->
+      <span>max -100</span>
+    </div>
+    
+    <input type="range" id="price-range" min="0" max="100" value="50">
+    
+    <div class="progress-bar">
+      <span id="progress"></span>
+    </div>
+        </aside>
+
+        <!-- Product Listing -->
+        <main class="product-listing">
+
+
+            <div class="sort-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+
+            <div class="products" id="product-list">
+                <!-- Loading indicators -->
+                <div class="loader" id="loader">
+                    <div class="spinner"></div> <!-- Spinner element -->
+                </div>
+                <!-- Product items will be dynamically inserted here -->
+            </div>
+
+            <!-- Pagination Controls -->
+
+            <button id="loadMoreBtn" class="loader-button" >Load More</button>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

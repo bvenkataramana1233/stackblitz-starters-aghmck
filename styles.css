@@ -1,0 +1,561 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header {
+  background-color: #1363df;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* .banner {
+  background: #f4a261;
+  color: white;
+  text-align: center;
+  padding: 20px;
+} */
+#banner {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: #f4a261;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.sidebar1 {
+  width: 50px;
+  margin-right: 0px;
+}
+
+hr.line {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.sidebar {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.product-listing {
+  flex: 1;
+}
+
+.sort-options {
+  margin-bottom: 20px;
+}
+
+.formcontent label {
+  font-size: 13px;
+  padding: 5px;
+  margin: 5px;
+  line-height: 1.8;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+  padding: 20px;
+}
+
+.product:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product h3 {
+  font-size: 12px;
+  line-height: 1.2;
+  max-height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 125px;
+}
+
+.product p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  height: 100% !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.pagination-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+/* Search container to align input and button */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Style for the input field */
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+#searchBtn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #0056b3;
+}
+
+#searchBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 320px) {
+  #banner {
+    padding: 10px 0;
+  }
+
+  .banner-img {
+    height: 250px;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-listing {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-listing {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  #banner {
+    padding: 15px 0;
+  }
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar1 {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  .product-listing {
+    flex: 1;
+  }
+
+  .pagination {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar1 {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    width: 300px;
+  }
+
+  .product-listing {
+    flex: 1;
+  }
+
+  .pagination {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar1 {
+    width: 0px;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    width: 320px;
+  }
+
+  .product-listing {
+    flex: 1;
+  }
+
+  .pagination {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1920px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .sidebar1 {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    width: 350px;
+  }
+
+  .product-listing {
+    flex: 1;
+  }
+
+  .pagination {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+  }
+  #banner {
+    padding: 10px 0;
+  }
+
+  .banner-img {
+    height: 250px;
+  }
+}
+/* Basic Button Styles */
+.loader-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative; /* To position the loader inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Disabled button (loading state) */
+.loader-button.loading {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Loader style */
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 4px solid transparent;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  display: none; /* Hidden by default */
+}
+
+/* Text inside button */
+.button-text {
+  display: block; /* Show text normally */
+}
+
+/* Show loader when active */
+.loader-button.loading .button-text {
+  visibility: hidden; /* Hide the text while loading */
+}
+
+/* Keyframe for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#sort {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#sort:hover {
+  border-color: #888;
+}
+
+#sort:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #f1f1f1;
+}
+
+#sort option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+}
+
+#sort option:hover {
+  background-color: #f0f0f0;
+}
+
+#sort option:checked {
+  background-color: #e0e0e0;
+}
+.range-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #4caf50;
+  width: 0%; /* This will be dynamically changed */
+}
+
+input[type='range'] {
+  width: 100%;
+  margin-top: 20px;
+}
